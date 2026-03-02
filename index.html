@@ -1,0 +1,143 @@
+        <span className="info-text"><span className="bold">活動日期：</span>115 年 04 月 04 日 (星期六)</span>
+              </div>
+              <div className="info-list-item">
+                <span className="info-emoji">⏰</span>
+                <span className="info-text"><span className="bold">活動時間：</span>上午 08:00 – 下午 16:00</span>
+              </div>
+              <div className="info-list-item">
+                <span className="info-emoji">🏟</span>
+                <span className="info-text"><span className="bold">活動地點：</span>大興村阿密斯特越野場 (花蓮縣光復鄉大興村民權街 51 號)</span>
+              </div>
+              <div className="info-list-item">
+                <span className="info-emoji">🏠</span>
+                <span className="info-text"><span className="bold">活動主辦單位：</span>盧家 ｜ <span className="bold">活動協辦單位：</span>蘇家</span>
+              </div>
+            </div>
+          </div>
+
+          <form action={ACTION_URL} method="POST" target="hidden_iframe" onSubmit={handleSubmit}>
+            
+            <div className="form-section">
+              <span className="section-title">✨  報名聯絡資料  ✨</span>
+              <p className="bold red" style={{textAlign: 'center', marginBottom: '15px'}}>📌 請於 115 年 3 月 15 日前完成報名 🌝</p>
+              
+              <div className="input-group">
+                <label>主要聯絡人姓名 <span className="required-star">*</span></label>
+                <input type="text" name="entry.526567900" required placeholder="您的回答" />
+              </div>
+
+              <div className="input-group">
+                <label>所屬家族/分系 <span className="required-star">*</span></label>
+                <p style={{fontSize: '12px', color: '#888', marginBottom: '5px'}}>(例如：家族 －張月妹、蘇保山 / 分系－張主蘭 家 )</p>
+                <input type="text" name="entry.584282293" required placeholder="您的回答" />
+              </div>
+
+              <div className="input-group">
+                <label>聯絡電話 <span className="required-star">*</span></label>
+                <input type="text" name="entry.966537358" required placeholder="您的回答" />
+              </div>
+
+              <div className="input-group">
+                <label>通訊地址</label>
+                <input type="text" name="entry.1629563567" placeholder="您的回答" />
+              </div>
+            </div>
+
+            <div className="form-section">
+              <span className="section-title">✨  當日是否出席  ✨</span>
+              <label className="radio-option">
+                <input type="radio" name="entry.1717444294" value="準時參加" required /> 準時參加
+              </label>
+              <label className="radio-option">
+                <input type="radio" name="entry.1717444294" value="無法參加（以下問題可免填，感謝您對宗親會的支持與關注）" /> 無法參加（以下問題可免填，感謝您對宗親會的支持與關注）
+              </label>
+            </div>
+
+            <div className="form-section" style={{background: '#FFFEF0', borderColor: '#ffe57f'}}>
+              <span className="section-title" style={{color: '#f57f17', borderBottomColor: '#ffe57f'}}>✨  活動用餐登記  ✨</span>
+              <p style={{fontSize: '14px', lineHeight: '1.6'}}>🔸 費用說明 ｜ 每桌 $5,000 元 + 另每人酌收 100 元 (含摸彩券及禮品)</p>
+              
+              <div className="input-group" style={{marginTop: '15px'}}>
+                <label>✨ 活動出席人數 (共幾位) ✨</label>
+                <input type="text" name="entry.1994712913" placeholder="例如：共 5 位" />
+              </div>
+
+              <div className="input-group">
+                <label>🔸 認領整桌 (______ 桌)</label>
+                <input type="text" name="entry.1823301719" placeholder="請填寫桌數" />
+              </div>
+
+              <div className="input-group">
+                <label>🔸 併桌人數 (______ 位)</label>
+                <input type="text" name="entry.710031592" placeholder="由主辦單位安排" />
+              </div>
+
+              <div className="input-group">
+                <label>🔸 用餐特殊需求</label>
+                <label className="radio-option">
+                  <input type="radio" name="entry.1687355696" value="無特殊需求" /> 無特殊需求
+                </label>
+                <label className="radio-option">
+                  <input type="radio" name="entry.1687355696" value="有特殊需求" /> 有特殊需求
+                </label>
+                <textarea name="entry.1860119472" rows="2" placeholder="※ 特殊需求說明 (例如：特殊需求和人數)"></textarea>
+              </div>
+            </div>
+
+            <div className="form-section">
+              <span className="section-title">✨  活動參與意願 ✨</span>
+              <div style={{ 
+                fontSize: "15px", 
+                color: "#555", 
+                marginBottom: "15px", 
+                textAlign: "center",
+                lineHeight: "1.8"
+              }}>
+                ❤️‍🔥 各位張家的舞林高手們請注意！演出現場我們準備了【精美獎品】 等著大家<br/>
+                🫵 只要敢秀、敢跳💃🕺🫷大獎就是你們家的🫸<br/>
+                <span className="bold" style={{ color: "#d32f2f" }}>✨ 家族表演活動參與 📢 前三名有獎品🏆<br/>
+                <span className="bold" style={{ color: "#0c0ce4" }}>🔸 有專業的評審會在現場幫各位打分數🫵</span><br/></span>
+                <span className="bold" style={{ color: "#d32f2f" }}>🔸  評分內容：</span><span className="bold" style={{ color: "#f05524" }}>🥇服裝儀容 🥈舞蹈整齊 🥉拿出你的自信🫵</span><br/>
+              </div>
+
+              <div className="input-group">
+                <label>表演參與意願</label>
+                <label className="radio-option">
+                  <input type="radio" name="entry.393094877" value="願意－用熱情的展現參與表演（請填選 [表演名稱] 及 [表演內容]）" /> 願意－用熱情的展現參與表演（請填選 [表演名稱] 及 [表演內容]）
+                </label>
+                <label className="radio-option">
+                  <input type="radio" name="entry.393094877" value="願願意－用炙熱的眼神觀賞節目（無表演節目）" /> 願意－用炙熱的眼神觀賞節目（無表演節目）
+                </label>
+              </div>
+
+              <div className="input-group">
+                <label className="bold">🎤 表演名稱&內容 🙌</label>
+                <p style={{ fontSize: "15px", color: "#555", marginBottom: "10px" }}>
+                  「花蓮縣舞」排練，不管是經典重現還是大膽編排我們都歡迎！請回傳至張氏 LINE 群組 👉 家族名 / 舞曲名稱 / 舞者名單。
+                </p>
+                <textarea name="entry.1775422134" rows="3" placeholder="請填寫：家族+歌曲+舞者名單"></textarea>
+                <p className="italic" style={{ fontSize: "12px", color: "#e91e63", marginTop: "8px" }}>
+                  🔥 範例：表演家族：張月妹家族＋表演歌曲：披上情人袋＋舞者名單：惠慈、諾亞、張芸以此類推。
+                </p>
+              </div>
+            </div>
+
+            <button type="submit" className="submit-btn">送出報名表單</button>
+
+            <div className="footer-text">
+              <span className="bold red">✨ 宗親會活動好康 ✨</span><br/>
+              📌 紀念品 📌 紀念貼紙 📌 抽獎活動 📌 越野車體驗<br/><br/>
+              <span className="bold red">💓 溫 馨 提 醒 💓</span><br/>
+              ✨ 如有問題請洽張氏 LINE 群組籌備組。期待見到大家！ ✨<br/>
+              （※ 若報名後需更改人數，請務必提前聯繫工作人員。）
+            </div>
+          </form>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<ZhangFamilyApp />);
+  </script>
+</body>
+</html>
