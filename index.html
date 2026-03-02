@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>2026 張氏家族宗親會報名出席表單</title>
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    :root {
+      --primary-blue: #0288d1;
+      --summer-sky: #7DD3F7;
+      --sunny-yellow: #FFD54F;
+      --sakura-pink: #FFEBF0;
+      --earth-brown: #5D4037;
+      --accent-red: #d32f2f;
+      --white: rgba(255, 255, 255, 0.98);
+    }
+
+    body {
+      margin: 0;
+      font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background: linear-gradient(135deg, var(--sakura-pink) 0%, #fff9c4 100%);
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    .main-container {
+      width: min(760px, 92vw);
+      background: var(--white);
+      border-radius: 30px;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* 頂部波浪裝飾 */
+    .header-banner {
+      height: 120px;
+      background: var(--summer-sky);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+    }
+
+    .header-content { padding: 30px 25px; text-align: center; }
+    .header-content h1 { color: var(--accent-red); font-size: 28px; margin-bottom: 20px; }
+    .header-content p { line-height: 1.8; text-align: justify; color: var(--earth-brown); }
+
+    .info-box {
+      background: #fff9c4;
+      padding: 20px;
+      margin: 0 25px 30px;
+      border-radius: 15px;
+      border-left: 8px solid var(--sunny-yellow);
+      font-size: 15px;
+    }
+
+    .form-card {
+      background: #fff;
+      padding: 25px;
+      margin: 0 25px 25px;
+      border-radius: 20px;
+      border: 1px solid #eee;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    .section-title {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--primary-blue);
+      border-bottom: 2px solid var(--summer-sky);
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+    }
+
+    .field-group { margin-bottom: 20px; }
+    .field-group label { display: block; font-weight: bold; margin-bottom: 8px; }
+    .required { color: var(--accent-red); margin-left: 4px; }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e1e8ed;
+      border-radius: 10px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    .option-label {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid #f0f0f0;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .option-label:hover { background: var(--sakura-pink); }
+    .option-label input { margin-right: 12px; width: 20px; height: 20px; }
+
+    .btn-submit {
+      background: linear-gradient(to right, #0288d1, #26c6da);
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 18px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(2,136,209,0.3);
+      transition: 0.3s;
+    }
+    .btn-submit:hover { transform: translateY(-2px); opacity: 0.9; }
+
+    .footer { text-align: center; padding: 20px; color: #888; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function ZhangFormApp() {
+      // 修正後的 Action URL
+      const GOOGLE_FORM_ACTION = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScF4xSwRQuYU9-e8Guz-ccw_FKE2AsFcWGQWMYt3NYypRV06Q/formResponse";
+
+      const handleFormSubmit = () => {
+        alert("🎉 報名資料已送出！\n期待在宗親會見到您！");
+        // 可以在此處導向其他頁面或重置表單
+      };
+
+      return (
+        <div className="main-container">
+          <div className="header-banner">🌊☀️🌸</div>
+          
+          <div className="header-content">
+            <h1>🎊 2026 張氏家族宗親會報名 🎊</h1>
+            <p>親愛的宗親家人們：歲月流轉，宗誼長青！一年一度的重聚時刻來了，誠摯邀請您攜眷出席，凝聚家族力量。</p>
+          </div>
+
+          <div className="info-box">
+            <strong>📍 活動資訊：</strong><br/>
+            📅 日期：115年04月04日 (六)<br/>
+            ⏰ 時間：08:00 - 16:00<br/>
+            🏟 地點：花蓮縣光復鄉大興村民權街51號 (阿密斯特越野場)
+          </div>
+
+          <form action={GOOGLE_FORM_ACTION} method="POST" target="hidden_iframe" onSubmit={handleFormSubmit}>
+            
+            {/* 第一區塊：聯絡資料 */}
+            <div className="form-card">
+              <span className="section-title">✨ 報名聯絡資料</span>
+              <div className="field-group">
+                <label>主要聯絡人姓名<span className="required">*</span></label>
+                <input type="text" name="entry.974793855" required placeholder="請輸入姓名" />
+              </div>
+
+              <div className="field-group">
+                <label>所屬家族/分系<span className="required">*</span></label>
+                <input type="text" name="entry.1160421956" required placeholder="例如：張月妹家族" />
+              </div>
+
+              <div className="field-group">
+                <label>聯絡電話<span className="required">*</span></label>
+                <input type="text" name="entry.1983680823" required placeholder="請輸入手機號碼" />
+              </div>
+
+              <div className="field-group">
+                <label>通訊地址</label>
+                <input type="text" name="entry.446901193" placeholder="請輸入地址" />
+              </div>
+            </div>
+
+            {/* 第二區塊：出席調查 */}
+            <div className="form-card">
+              <span className="section-title">✨ 當日是否出席</span>
+              <label className="option-label">
+                <input type="radio" name="entry.1720690082" value="準時參加" required /> 準時參加
+              </label>
+              <label className="option-label">
+                <input type="radio" name="entry.1720690082" value="無法參加（以下問題可免填，感謝您對宗親會的支持與關注）" /> 無法參加
+              </label>
+            </div>
+
+            {/* 第三區塊：用餐登記 */}
+            <div className="form-card">
+              <span className="section-title">✨ 用餐與表演登記</span>
+              <div className="field-group">
+                <label>出席總人數</label>
+                <input type="text" name="entry.1179077745" placeholder="例如：共 10 位" />
+              </div>
+              <div className="field-group">
+                <label>認領桌次 / 併桌人數</label>
+                <input type="text" name="entry.1587057131" placeholder="例如：1桌 或 3位併桌" />
+              </div>
+              <div className="field-group">
+                <label>用餐特殊需求</label>
+                <textarea name="entry.1228127910" rows="2" placeholder="如素食人數等"></textarea>
+              </div>
+              <div className="field-group">
+                <label>表演節目報名</label>
+                <textarea name="entry.903520975" rows="2" placeholder="家族名 / 歌曲 / 舞者名單"></textarea>
+              </div>
+            </div>
+
+            <div style={{padding: '0 25px 40px'}}>
+              <button type="submit" className="btn-submit">送出報名表單</button>
+            </div>
+
+          </form>
+
+          <div className="footer">
+            2026 張氏家族宗親會籌備組 敬邀
+          </div>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<ZhangFormApp />);
+  </script>
+</body>
+</html>
